@@ -3,7 +3,7 @@
     "short_name": "ChatLinker",
     "start_url": "/",
     "theme_color": "#1a5fb4",
-    "background_color": "#000000",
+    "background_color": "#33d17a",
     "display": "fullscreen",
     "scope": "/",
     "orientation": "any",
