@@ -1,11 +1,11 @@
 {
     "name": "ChatLinker",
     "short_name": "ChatLinker",
-    "start_url": "/",
+    "start_url": "/ChatLinker/",
     "theme_color": "#1a5fb4",
     "background_color": "#000000",
     "display": "fullscreen",
-    "scope": "/",
+    "scope": "/ChatLinker/",
     "orientation": "any",
     "dir": "ltr",
     "lang": "en",
@@ -14,19 +14,19 @@
     "categories": ["design", "developer", "games", "education", "entertainment"],
     "icons": [
 	{
-		"src": "/favicon.svg",
+		"src": "favicon.svg",
 		"sizes": "any",
 		"type": "image/svg+xml",
 		"purpose": "maskable"
 	},
 	{
-		"src": "/favicon.svg",
+		"src": "favicon.svg",
 		"sizes": "any",
 		"type": "image/svg+xml",
 		"purpose": "monochrome"
 	},
 	{
-		"src": "/favicon.svg",
+		"src": "favicon.svg",
 		"sizes": "any",
 		"type": "image/svg+xml",
 		"purpose": "any"
