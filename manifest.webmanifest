@@ -5,7 +5,7 @@
     "theme_color": "#1a5fb4",
     "background_color": "#000000",
     "display": "fullscreen",
-    "scope": "/ChatLinker",
+    "scope": "/",
     "orientation": "any",
     "dir": "ltr",
     "lang": "en",
@@ -14,13 +14,13 @@
     "categories": ["design", "developer", "games", "education", "entertainment"],
     "icons": [
 	{
-		"src": "favicon.svg",
+		"src": "../ChatLinker/favicon.svg",
 		"sizes": "any",
 		"type": "image/svg+xml",
 		"purpose": "maskable"
 	},
 	{
-		"src": "favicon.svg",
+		"src": "../ChatLinker/favicon.svg",
 		"sizes": "any",
 		"type": "image/svg+xml",
 		"purpose": "monochrome"
