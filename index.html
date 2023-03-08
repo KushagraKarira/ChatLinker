@@ -30,17 +30,18 @@
 		src: url("Inter-Italic.var.woff2") format("woff2-variations"), url("Inter-Italic.var.woff2?v=3.19") format("woff2");
 		src: url("Inter-Italic.var.woff2") format("woff2") tech("variations");
 		}
-		body{background-color:#f6f6f6}
-		.text,a:active,a:link,a:visited,body,svg{color:#313131}
+		body{background-color:#FAFAFA}
+		.text,a:active,a:link,a:visited,body,svg{color:#242424}
 		table{width:100%;text-align:center;border-spacing:0 5px}
 		h1{text-align:center;}
 		p{text-align:center;line-height:100%;margin-bottom:0}
-		select,button,input{text-align:center;background-color:#dedede;color:#313131;height:100%;width:100%;height:50px;border-radius:25px;text-align:center; border: 0 !important;box-shadow: none;}
+		select,button,input{text-align:center;background-color:#E5E5E5;color:#242424;height:100%;width:100%;height:50px;border-radius:25px;text-align:center; border: 0 !important;box-shadow: none;}
 		::placeholder{text-align:center}
+
 		@media (prefers-color-scheme:dark) {
-		body{background-color:#313131}
-		.text,a:active,a:link,a:visited,body,svg{color:#f6f6f6}
-		select,button,input{background-color:#464646;color:#f6f6f6;}
+		body{background-color:#242424}
+		.text,a:active,a:link,a:visited,body,svg{color:#FAFAFA}
+		select,button,input{background-color:#353535;color:#FAFAFA;}
 }
 	</style>
 
@@ -278,12 +279,12 @@
 					</select>
 				</td>
 				<td>
-					<input type="tel" id="phone" name="phone" placeholder="Phone Number :" maxlength="10" pattern="[0-9]{10}" required>
+					<input type="tel" id="phone" name="phone" placeholder="Phone Number" maxlength="10" pattern="[0-9]{10}" required>
 				</td>
 			</tr>
 			<tr>
 				<td colspan="2">
-					<input type="text" id="message" name="message" placeholder="Message (Optional)">
+					<input type="text" id="message" name="message" placeholder="Message ( Optional )">
 				</td>
 			</tr>
 			<tr>
@@ -305,10 +306,5 @@
 			window.location.href = "https://wa.me/" + combined + "/?text=" + message;
 		}
 		</script>
-		<p>Made by Kushagra Karira</p>
-		<h2><b>Instructions</b></h2>
-		<ol><li>The dropdown is the country code selector. India (+91) is default, click to change. This prevents spam/ misuse.</li>
-			<li>Second is the Phone number, limited to only numbers with max length of 10.</li>
-			<li>Next, is Message. The field is optional and anything typed here will show up in the message box.</li>
-			<li>Send, check before clicking. This will open up the app.</li></ol>
+		<p>Made with ❤️ by <b>Kushagra Karira</b></p>
 	</body>
