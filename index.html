@@ -17,6 +17,38 @@
 	<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
 	<title>WA-Connect</title
 </head>
+<style>
+	@font-face{font-family:'Cantarell';src:local('Cantarell Regular'),local(Cantarell-Regular),url(/fonts/Cantarell-Regular.woff2) format("woff2");font-weight:400;font-style:normal}
+body{background-color:#f6f5f4;font-family:'Cantarell',sans-serif}
+.text,a:active,a:link,a:visited,body,svg{color:#313131}
+table{background-color:#99c1f1;border:solid #99c1f1;border-radius:25px;height:10px;width:100%;text-align:center;vertical-align:middle;padding:0}
+th,td{background-color:#99c1f1;border:solid #1a5fb4;border-radius:25px;height:10px;text-align:center}
+th:hover,th.selected{background-color:#1a5fb4}
+.header{top:0;position:fixed;left:-5px;padding:5px;width:100%;text-align:center}
+.footer{bottom:0;position:fixed;left:-5px;padding:5px;width:100%;text-align:center}
+.center{display:block;margin-left:auto;margin-right:auto}
+H1,H2{text-align:center; font-weight: bold;}
+P{text-align:justify}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+@media (prefers-color-scheme:dark) {
+body{background-color:#313131;font-family:'Cantarell',sans-serif}
+.text,a:active,a:link,a:visited,body,svg{color:#f6f5f4}
+table{background-color:#1a5fb4;border:solid #1a5fb4;border-radius:25px;height:10px;width:100%;text-align:center;vertical-align:middle;padding:0}
+th,td{background-color:#1a5fb4;border:solid #99c1f1;border-radius:25px;height:10px;text-align:center}
+th:hover,th.selected{background-color:#99c1f1}
+}
+
+</style>
 <body>
 <h1>WhatsApp Connect</h1>
 <h2>Why give names to phone numbers ?</h2>
@@ -25,7 +57,7 @@
 </p>
 <table>
 	<tr><td width="20%"><!-- country codes (ISO 3166) and Dial codes. -->
-<select name="countryCode" id="">
+<select name="countryCode" id="countryCode">
 	<option data-countryCode="IN" value="91">India (+91)</option>
 	<optgroup label="Other countries">
 		<option data-countryCode="DZ" value="213">Algeria (+213)</option>
@@ -246,7 +278,14 @@
 </select></td><td width="80%">
   <input type="tel" id="phone" name="phone" placeholder="Enter a phone number:" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required></input></td></tr>
 	<tr><td colspan="2">Message (Optional)</td></tr>
-	<tr><td colspan="2">[ SEND ]</td></tr>
+	<tr><td colspan="2"><button type="button"  onclick="MergeSend(countryCode,phone)">SEND</button></td></tr>
+	<script>
+		function MergeSend(countryCode,phone) {
+		var combined = countryCode + phone;
+		window.location.href = "https://wa.me/+" + combined;
+		}
+	</script>
 </table>
 </body>
 </html>
+
