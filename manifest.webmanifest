@@ -1,0 +1,36 @@
+{
+    "name": "ChatLinker",
+    "short_name": "ChatLinker",
+    "start_url": "/",
+    "theme_color": "#1a5fb4",
+    "background_color": "#000000",
+    "display": "fullscreen",
+    "scope": "/",
+    "orientation": "any",
+    "dir": "ltr",
+    "lang": "en",
+    "description": "Send without saving number",
+    "prefer_related_applications": false,
+    "categories": ["design", "developer", "games", "education", "entertainment"],
+    "icons": [
+	{
+		"src": "/favicon.svg",
+		"sizes": "any",
+		"type": "image/svg+xml",
+		"purpose": "maskable"
+	},
+	{
+		"src": "/favicon.svg",
+		"sizes": "any",
+		"type": "image/svg+xml",
+		"purpose": "monochrome"
+	},
+	{
+		"src": "/favicon.svg",
+		"sizes": "any",
+		"type": "image/svg+xml",
+		"purpose": "any"
+	}
+    ]
+}
+
