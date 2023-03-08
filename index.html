@@ -295,13 +295,16 @@
 		</table>
 
 		<script>
-			function mergeSend() {
-				var countryCode = document.getElementById("countryCode").value;
-				var phone = document.getElementById("phone").value;
-				var message = document.getElementById("message").value;
-				var combined = encodeURIComponent(countryCode) + encodeURIComponent(phone);
-				window.location.href = "https://wa.me/" + combined + "/?text=" + message;
+		function mergeSend() {
+			var countryCode = document.getElementById("countryCode").value;
+			var phone = document.getElementById("phone").value;
+			var message = document.getElementById("message").value;
+			if (message) {
+				message = encodeURIComponent(message);
 			}
+			var combined = encodeURIComponent(countryCode) + encodeURIComponent(phone);
+			window.location.href = "https://wa.me/" + combined + "/?text=" + message;
+		}
 		</script>
 		<p>Made by Kushagra Karira</p>
 		<h2><b>Instructions</b></h2>
