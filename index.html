@@ -16,8 +16,20 @@
 		<title>ChatLinker</title>
 	</head>
 	<style>
-		@import "https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap";
-		font-family: Inter,sans-serif;
+		:root { font-family: "Inter", sans-serif; }
+		@supports (font-variation-settings: normal) {:root { font-family: "InterVar", sans-serif; font-optical-sizing: auto; }}
+		@font-face {font-family: "InterVar";font-weight: 100 900;font-display: swap;font-style: normal;
+		src: url("Inter.var.woff2") format("woff2-variations"),url("Inter.var.woff2?v=3.19") format("woff2");
+		src: url("Inter.var.woff2") format("woff2") tech("variations");
+		}
+		@font-face {
+		font-family: "InterVar";
+		font-weight: 100 900;
+		font-display: swap;
+		font-style: italic;
+		src: url("Inter-Italic.var.woff2") format("woff2-variations"), url("Inter-Italic.var.woff2?v=3.19") format("woff2");
+		src: url("Inter-Italic.var.woff2") format("woff2") tech("variations");
+		}
 		body{background-color:#f6f5f4}
 		.text,a:active,a:link,a:visited,body,svg{color:#313131}
 		table{width:100%;text-align:center;vertical-align:middle;border-spacing:5px 5px}
