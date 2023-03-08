@@ -5,7 +5,7 @@
     "theme_color": "#1a5fb4",
     "background_color": "#000000",
     "display": "fullscreen",
-    "scope": "/",
+    "scope": "/ChatLinker",
     "orientation": "any",
     "dir": "ltr",
     "lang": "en",
