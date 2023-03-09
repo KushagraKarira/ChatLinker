@@ -18,7 +18,7 @@
 		:root { font-family: "Inter", sans-serif; }
 		@supports (font-variation-settings: normal) {:root { font-family: "InterVar", sans-serif; font-optical-sizing: auto; }}
 		@font-face {font-family: "InterVar";font-weight: 100 900;font-display: swap;font-style: normal;
-		src: url("Inter.var.woff2") format("woff2-variations"),url("Inter.var.woff2?v=3.19") format("woff2");
+		src: url("Inter.var.woff2") format("woff2-variations"),url("Inter.var.woff2") format("woff2");
 		src: url("Inter.var.woff2") format("woff2") tech("variations");
 		}
 		@font-face {
@@ -26,22 +26,22 @@
 		font-weight: 100 900;
 		font-display: swap;
 		font-style: italic;
-		src: url("Inter-Italic.var.woff2") format("woff2-variations"), url("Inter-Italic.var.woff2?v=3.19") format("woff2");
+		src: url("Inter-Italic.var.woff2") format("woff2-variations"), url("Inter-Italic.var.woff2") format("woff2");
 		src: url("Inter-Italic.var.woff2") format("woff2") tech("variations");
 		}
+
 		body{background-color:#FAFAFA}
 		.text,a:active,a:link,a:visited,body,svg{color:#242424}
-		table{width:100%;text-align:center;border-spacing:0 5px}
+		table{width:100%;text-align:center;border-spacing:5px 5px}
 		h1{text-align:center;}
-		p{text-align:center;line-height:100%;margin-bottom:0}
-		select,button,input{text-align:center;background-color:#E5E5E5;color:#242424;height:100%;width:100%;height:50px;border-radius:25px;text-align:center; border: 0 !important;box-shadow: none;}
+		p{text-align:center;}
+		select,button,input{text-align:center;background-color:#E5E5E5;color:#242424;height:100%;width:100%;height:50px;border-radius:25px;border: 0 !important;box-shadow: none;}
 		::placeholder{text-align:center}
 
 		@media (prefers-color-scheme:dark) {
 		body{background-color:#242424}
 		.text,a:active,a:link,a:visited,body,svg{color:#FAFAFA}
-		select,button,input{background-color:#353535;color:#FAFAFA;}
-}
+		select,button,input{background-color:#353535;color:#FAFAFA;}}
 	</style>
 	<body>
 		<script type="text/javascript">
@@ -52,9 +52,7 @@
 			}
 		</script>
 		<h1><b>Chat Linker</b></h1>
-		<table>
-			<tr>
-				<td>
+		<table><tr><td>
 					<!-- country codes (ISO 3166) and Dial codes. -->
 					<select id="countryCode">
 						<option data-countryCode="IN" value="+91">India (+91)</option>
@@ -274,6 +272,7 @@
 							<option data-countryCode="ZM" value="+260">Zambia (+260)</option>
 							<option data-countryCode="ZW" value="+263">Zimbabwe (+263)</option>
 						</optgroup>
+<<<<<<< HEAD
 					</select>
 				</td>
 				<td width="70%">
@@ -289,6 +288,12 @@
 				<td colspan="2">
 					<button type="button" onclick="mergeSend()">SEND</button>
 				</td>
+=======
+					</select></td>
+				<td><input type="tel" id="phone" name="phone" placeholder="Phone Number" maxlength="10" pattern="[0-9]{10}" required></td></tr>
+			<tr><td colspan="2"><input type="text" id="message" name="message" placeholder="Message ( Optional )"></td></tr>
+			<tr><td colspan="2"><button type="button" onclick="mergeSend()">SEND</button></td>
+>>>>>>> df77d19 (something)
 			</tr>
 		</table>
 
