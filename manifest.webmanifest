@@ -6,7 +6,7 @@
     "background_color": "#33d17a",
     "display": "fullscreen",
     "scope": "/",
-    "orientation": "any",
+    "orientation": "natural",
     "dir": "ltr",
     "lang": "en",
     "description": "Send without saving number",
