@@ -35,6 +35,8 @@
 		table{width:100%;text-align:center;border-spacing:5px 5px}
 		h1{text-align:center;}
 		p{text-align:center;}
+		.header{top:0;position:fixed;left:-5px;padding:5px;width:100%;text-align:center}
+		.footer{bottom:0;position:fixed;left:-5px;padding:5px;width:100%;text-align:center}
 		select,button,input{text-align:center;background-color:#E5E5E5;color:#242424;height:100%;width:100%;height:50px;border-radius:25px;border: 0 !important;box-shadow: none;}
 		::placeholder{text-align:center}
 
@@ -55,15 +57,15 @@
 		<table><tr><td>
 					<!-- country codes (ISO 3166) and Dial codes. -->
 					<select id="countryCode">
-						<option data-countryCode="IN" value="+91">India (+91)</option>
+						<option data-countryCode="IN" value="+91">🇮🇳 India (+91)</option>
 						<optgroup label="Other countries">
-							<option data-countryCode="DZ" value="+213">Algeria (+213)</option>
-							<option data-countryCode="AD" value="+376">Andorra (+376)</option>
-							<option data-countryCode="AO" value="+244">Angola (+244)</option>
-							<option data-countryCode="AI" value="+1264">Anguilla (+1264)</option>
-							<option data-countryCode="AG" value="+1268">Antigua &amp; Barbuda (+1268)</option>
-							<option data-countryCode="AR" value="+54">Argentina (+54)</option>
-							<option data-countryCode="AM" value="+374">Armenia (+374)</option>
+							<option data-countryCode="DZ" value="+213">🇩🇿 Algeria (+213)</option>
+							<option data-countryCode="AD" value="+376">🇦🇩 Andorra (+376)</option>
+							<option data-countryCode="AO" value="+244">🇦🇴 Angola (+244)</option>
+							<option data-countryCode="AI" value="+1264">🇦🇮 Anguilla (+1264)</option>
+							<option data-countryCode="AG" value="+1268">🇦🇬 Antigua &amp; Barbuda (+1268)</option>
+							<option data-countryCode="AR" value="+54">🇦🇷 Argentina (+54)</option>
+							<option data-countryCode="AM" value="+374">🇦🇲 Armenia (+374)</option>
 							<option data-countryCode="AW" value="+297">Aruba (+297)</option>
 							<option data-countryCode="AU" value="+61">Australia (+61)</option>
 							<option data-countryCode="AT" value="+43">Austria (+43)</option>
@@ -142,7 +144,7 @@
 							<option data-countryCode="HK" value="+852">Hong Kong (+852)</option>
 							<option data-countryCode="HU" value="+36">Hungary (+36)</option>
 							<option data-countryCode="IS" value="+354">Iceland (+354)</option>
-							<option data-countryCode="IN" value="+91">India (+91)</option>
+							<option data-countryCode="IN" value="+91">🇮🇳 India (+91)</option>
 							<option data-countryCode="ID" value="+62">Indonesia (+62)</option>
 							<option data-countryCode="IR" value="+98">Iran (+98)</option>
 							<option data-countryCode="IQ" value="+964">Iraq (+964)</option>
@@ -256,7 +258,7 @@
 							<option data-countryCode="UG" value="+256">Uganda (+256)</option>
 							<option data-countryCode="GB" value="+44">UK (+44)
 							<option data-countryCode="UA" value="+380">Ukraine (+380)</option>
-							<option data-countryCode="AE" value="+971">United Arab Emirates (+971)</option>
+							<option data-countryCode="AE" value="+971">🇦🇪 United Arab Emirates (+971)</option>
 							<option data-countryCode="UY" value="+598">Uruguay (+598)</option>
 							<option data-countryCode="US" value="+1">USA (+1)</option>
 							<option data-countryCode="UZ" value="+7">Uzbekistan (+7)</option>
@@ -272,29 +274,22 @@
 							<option data-countryCode="ZM" value="+260">Zambia (+260)</option>
 							<option data-countryCode="ZW" value="+263">Zimbabwe (+263)</option>
 						</optgroup>
-<<<<<<< HEAD
 					</select>
 				</td>
 				<td width="70%">
 					<input type="tel" id="phone" name="phone" placeholder="Phone Number" maxlength="10" pattern="[0-9]{10}" required>
 				</td>
 			</tr>
+
 			<tr>
 				<td colspan="2">
 					<input type="text" id="message" name="message" placeholder="Message ( Optional )">
 				</td>
 			</tr>
-			<tr>
+
+				<tr>
 				<td colspan="2">
-					<button type="button" onclick="mergeSend()">SEND</button>
-				</td>
-=======
-					</select></td>
-				<td><input type="tel" id="phone" name="phone" placeholder="Phone Number" maxlength="10" pattern="[0-9]{10}" required></td></tr>
-			<tr><td colspan="2"><input type="text" id="message" name="message" placeholder="Message ( Optional )"></td></tr>
-			<tr><td colspan="2"><button type="button" onclick="mergeSend()">SEND</button></td>
->>>>>>> df77d19 (something)
-			</tr>
+					<button type="button" onclick="mergeSend()">SEND</button></tr>
 		</table>
 
 		<script>
@@ -309,5 +304,5 @@
 			window.location.href = "https://wa.me/" + combined + "/?text=" + message;
 		}
 		</script>
-		<p>Made with ❤️ by <b>Kushagra Karira</b></p>
+		<p class=footer><a href="https://github.com/KushagraKarira/ChatLinker">Made</a> with ❤️ by <b>Kushagra Karira</b></p>
 	</body>
