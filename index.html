@@ -307,7 +307,7 @@
         countryCode = '';
     }
     var combined = encodeURIComponent(countryCode) + encodeURIComponent(phone);
-    window.open("https://wa.me/" + combined + "/?text=" + message, '_blank');
+    window.open("https://api.whatsapp.com/send?text=" + message + "&phone=" + combined, '_blank');
 }
 		</script>
 		<p class=footer><a href="https://github.com/KushagraKarira/ChatLinker">Made with ❤️ by </a><a href="https://kushagrakarira.com/"><b>Kushagra Karira</b></a></p>
