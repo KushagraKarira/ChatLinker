@@ -277,7 +277,7 @@
 					</select>
 				</td>
 				<td width="70%">
-					<input type="tel" id="phone" name="phone" placeholder="Phone Number" maxlength="10" pattern="[0-9]{10}" required>
+					<input type="tel" id="phone" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" required>
 				</td>
 			</tr>
 
@@ -294,17 +294,21 @@
 
 		<script>
 			function mergeSend() {
-			var countryCode = document.getElementById("countryCode").value;
-			var phone = document.getElementById("phone").value;
-			var message = document.getElementById("message").value.trim();
-			if (message.length > 0) {
-			message = encodeURIComponent(message);
-			} else {
-			message = '';
-			}
-			var combined = encodeURIComponent(countryCode) + encodeURIComponent(phone);
-			window.open("https://wa.me/" + combined + "/?text=" + message, '_blank');
-			}
+    var countryCode = document.getElementById("countryCode").value;
+    var phone = document.getElementById("phone").value.trim();
+    var message = document.getElementById("message").value.trim();
+    if (message.length > 0) {
+        message = encodeURIComponent(message);
+    } else {
+        message = '';
+    }
+    if (phone.length > 10 && phone.charAt(0) == '+') {
+        phone = phone.substring(phone.length - 10);
+        countryCode = '';
+    }
+    var combined = encodeURIComponent(countryCode) + encodeURIComponent(phone);
+    window.open("https://wa.me/" + combined + "/?text=" + message, '_blank');
+}
 		</script>
 		<p class=footer><a href="https://github.com/KushagraKarira/ChatLinker">Made with ❤️ by </a><a href="https://kushagrakarira.com/"><b>Kushagra Karira</b></a></p>
 	</body>
