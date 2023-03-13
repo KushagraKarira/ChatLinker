@@ -1,53 +1,32 @@
-const cacheName = "cache";
+const CACHE_NAME = 'my-cache';
 
-self.addEventListener("install", event => {
-  // Activate the new service worker immediately
-  self.skipWaiting();
-
-  // Add the initial resources to the cache
-  event.waitUntil(
-    caches.open(cacheName).then(cache => {
-      return cache.addAll([
-        "/",
-        "/index.html",
-        "/styles.css"
-      ]);
-    })
-  );
-});
-
-self.addEventListener("activate", event => {
-  // Delete any non-current cache
-  event.waitUntil(
-    caches.keys().then(keys => {
-      return Promise.all(
-        keys.filter(key => key !== cacheName)
-          .map(key => caches.delete(key))
-      );
-    })
-  );
-});
-
-// Offline-first, cache-first strategy
-self.addEventListener("fetch", event => {
+self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request).then(cachedResponse => {
-      // If the resource is in the cache, return it
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-
-      // Otherwise, fetch the resource from the network
-      return fetch(event.request).then(networkResponse => {
-        // Add the resource to the cache for future use
-        if (networkResponse.ok) {
-          caches.open(cacheName).then(cache => {
-            cache.put(event.request, networkResponse.clone());
-          });
+    fetch(event.request)
+      .then(response => {
+        // If the response is valid, cache it for later use
+        if (response && response.status === 200) {
+          const responseToCache = response.clone();
+          caches.open(CACHE_NAME)
+            .then(cache => {
+              // Set the cache-control header to cache the response for 68 years !!
+              const headers = new Headers(response.headers);
+              headers.set('cache-control', 'max-age=2147483647');
+              const responseWithHeaders = new Response(responseToCache.body, {
+                status: responseToCache.status,
+                statusText: responseToCache.statusText,
+                headers: headers,
+              });
+              cache.put(event.request, responseWithHeaders);
+            });
         }
 
-        return networkResponse;
-      });
-    })
+        return response;
+      })
+      .catch(() => {
+        // If the network request fails, try to retrieve the resource from the cache
+        return caches.match(event.request);
+      })
   );
 });
+
