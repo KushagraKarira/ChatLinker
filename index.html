@@ -15,35 +15,25 @@
 		<title>ChatLinker</title>
 	</head>
 	<style>
-		:root { font-family: "Inter", sans-serif; }
-		@supports (font-variation-settings: normal) {:root { font-family: "InterVar", sans-serif; font-optical-sizing: auto; }}
-		@font-face {font-family: "InterVar";font-weight: 100 900;font-display: swap;font-style: normal;
-		src: url("Inter.var.woff2") format("woff2-variations"),url("Inter.var.woff2") format("woff2");
-		src: url("Inter.var.woff2") format("woff2") tech("variations");
-		}
-		@font-face {
-		font-family: "InterVar";
-		font-weight: 100 900;
-		font-display: swap;
-		font-style: italic;
-		src: url("Inter-Italic.var.woff2") format("woff2-variations"), url("Inter-Italic.var.woff2") format("woff2");
-		src: url("Inter-Italic.var.woff2") format("woff2") tech("variations");
-		}
-
-		body{background-color:#FAFAFA}
-		.text,a:active,a:link,a:visited,body,svg{color:#242424}
-		table{width:100%;text-align:center;border-spacing:5px 5px}
-		h1{text-align:center;}
-		p{text-align:center;}
-		.header{top:0;position:fixed;left:-5px;padding:5px;width:100%;text-align:center}
-		.footer{bottom:0;position:fixed;left:-5px;padding:5px;width:100%;text-align:center}
-		select,button,input{text-align:center;background-color:#E5E5E5;color:#242424;height:100%;width:100%;height:50px;border-radius:25px;border: 0 !important;box-shadow: none;}
-		::placeholder{text-align:center}
-
-		@media (prefers-color-scheme:dark) {
-		body{background-color:#242424}
-		.text,a:active,a:link,a:visited,body,svg{color:#FAFAFA}
-		select,button,input{background-color:#353535;color:#FAFAFA;}}
+:root{font-family:"Inter",sans-serif}
+@font-face{font-family:"InterVar";font-weight:100 900;font-display:swap;font-style:normal;src:url(Inter.var.woff2) format("woff2-variations"),url(Inter.var.woff2) format("woff2");src:url(Inter.var.woff2) format("woff2") tech(variations)}
+@font-face{font-family:"InterVar";font-weight:100 900;font-display:swap;font-style:italic;src:url(Inter-Italic.var.woff2) format("woff2-variations"),url(Inter-Italic.var.woff2) format("woff2");src:url(Inter-Italic.var.woff2) format("woff2") tech(variations)}
+body{background-color:#FAFAFA}
+.text,a:active,a:link,a:visited,body,svg{color:#242424}
+table{width:100%;text-align:center;border-spacing:5px 5px}
+h1{text-align:center}
+p{text-align:center}
+.header{top:0;position:fixed;left:-5px;padding:5px;width:100%;text-align:center}
+.footer{bottom:0;position:fixed;left:-5px;padding:5px;width:100%;text-align:center}
+select,input{text-align:center;background-color:#E5E5E5;color:#242424;height:100%;width:100%;height:50px;border-radius:25px;border:0!important;box-shadow:none}
+button{text-align:center;background-color:#26a269;color:#242424;height:100%;width:100%;height:50px;border-radius:25px;border:0!important;box-shadow:none}
+::placeholder{text-align:center}
+@media (prefers-color-scheme:dark) {
+body{background-color:#242424}
+.text,a:active,a:link,a:visited,body,svg{color:#FAFAFA}
+select,button,input{background-color:#353535;color:#FAFAFA}
+button{background-color:#8ff0a4;color:#FAFAFA}
+}
 	</style>
 	<body>
 		<script type="text/javascript">
